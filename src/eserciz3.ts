@@ -1,3 +1,5 @@
+// valutazione media ma io voglio inserire più voti finchè non è valido
+
 let isValid = true;
 let somma = 0;
 let nvoti = 0;
