@@ -1,24 +1,25 @@
-let isValid = true;
-let somma = 0;
-let nvoti = 0;
-let mediaf = 0;
+// scrivere programma che
+// step 1: dati 2 numeri interi in input, calcola il mcm tra i due.
+// step 2: dati 2 numeri interi in input, calcola mcd tra i due.
 
-while (isValid)
+alert("Ciao! Qui calcoleremo il mcm e il mcd tra due numeri interi che ci darai.");
+
+const numero1 = Number(prompt("Inserire il primo numero intero."));
+const numero2 = Number(prompt("Inserire il secondo numero intero."));
+
+let a = numero1;
+let b = numero2;
+
+while (b != 0)
 {
-    const numero = Number(prompt("Inserisci il voto."));
-    if ((numero < 1) || (numero > 10))
-    {
-        isValid = false;
-
-        alert("Il numero non è valido.");
-    }
-    else
-    {
-        somma += numero;
-    }
-
-    nvoti += 1;
+    const cosoboh = b;
+    b = a % b;
+    a = cosoboh;
 }
+const mcd = a;
+const mcm = (numero1 * numero2) / mcd;
 
-mediaf = somma / nvoti;
-alert("La tua media è " + mediaf);
+console.log("Il mcd tra " + numero1 + " e " + numero2 + " è: " + mcd);
+console.log("Il mcm tra " + numero1 + " e " + numero2 + " è: " + mcm);
+
+console.log("Fine programma...");
